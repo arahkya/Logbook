@@ -10,10 +10,10 @@ if(!(Test-Path $inFile)){
     return
 }
 
-$outputFile = Join-Path $workDir "bin/main.wasm"
+$outputFile = Join-Path $workDir "bin/main.exe"
 
 if(Test-Path $outputFile){
     Remove-Item $outputFile
 }
 
-$env:GOOS="js";$env:GOARCH="wasm"; go build -o $outputFile $inFile
+$env:GOOS="windows";$env:GOARCH="amd64"; go build -o $outputFile $inFile
