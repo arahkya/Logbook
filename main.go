@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/arahkya/logbook/net/handlers"
+	handlers "github.com/arahkya/logbook/net/handlers"
 )
 
 func main() {
